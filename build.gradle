@@ -7,7 +7,7 @@ publishing {
         release(MavenPublication) {
             groupId = 'com.github.theignitedflame'
             artifactId = 'android-glassmorphismfactory'
-            version = '0.5.0'
+            version = 'v1.0.0-beta'
 
             afterEvaluate {
                 from components.release
