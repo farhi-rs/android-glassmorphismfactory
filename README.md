@@ -55,7 +55,7 @@ public void onCreate(Bundle bundle) {
     /* Link our Activity to GlassmorphismFactory */
      GlassmorphismFactory.setActivity(this);
     /* Provide a default blur radius (not necessary, default blur value automatically setted to 25) */
-     GlassmorphismFactory.setDefaultBlurRadius(int radius);
+     GlassmorphismFactory.setDefaultBlurRadius(int radius); // blur radius value confined between 0 and 25
     /* Link our view(s) to GlassmorphismFactory and a BlurListener */
      GlassmorphismFactory.setBlurListener(View view, BlurListener listener);
 
@@ -80,14 +80,17 @@ public void onCreate(Bundle bundle) {
     });
     */
 
+     /* If you want to set a specified blur value to a view */
+     GlassmorphismFactory.setBlurRadius(View view, int radius); // blur radius value confined between 0 and 25
+
      /* If you want to include the setted|linked view in its generated Glassmorphism blur */
      GlassmorphismFactory.setViewIncludedInBlur(View view, boolean included);
 
      /* And then we start generating blur */
      GlassmorphismFactory.startGeneratingBlur();
 
-     /* You can stop it later if you want */
-     // GlassmorphismFactory.stopGeneratingBlur();
+     /* You can stop it later if you want, and also you can check if the generator is running or not */
+     // if (GlassmorphismFactory.isGeneratingBlur()) GlassmorphismFactory.stopGeneratingBlur();
 
      ....
     }
