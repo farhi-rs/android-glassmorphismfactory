@@ -1,0 +1,8 @@
+dependencies {
+    testImplementation "com.github.theignitedflame:android-glassmorphismfactory:v1.0.0-beta"
+    testRuntimeOnly "com.github.theignitedflame:android-glassmorphismfactory:v1.0.0-beta"
+}
+
+test {
+    useJUnitPlatform()
+}
