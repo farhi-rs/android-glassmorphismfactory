@@ -1,5 +1,5 @@
 # android-glassmorphismfactory
-Applying Glassmorphism effect now is no nightmare using our library GlassmorphismFactory.
+Applying Glassmorphism effect now in your Android project is no nightmare using our library GlassmorphismFactory.
 
 Infact, now it's easy as pressing a button.
 
@@ -13,3 +13,9 @@ Thanks to [Android](https://github.com/android) for providing this incredible li
 
 # Adding our library to your project
 
+To add GlassmorphismFactory library to your android project you can do the following :
+
+Using gradle :
+'''
+
+'''
