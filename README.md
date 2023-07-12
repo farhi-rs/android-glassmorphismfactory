@@ -7,9 +7,9 @@ Just link your [Activity](https://developer.android.com/reference/android/app/Ac
 
 # How our library works
 
-Our library uses (Android)[https://github.com/android]'s (RenderScript Intrinsics Replacement Toolkit)[https://github.com/android/renderscript-intrinsics-replacement-toolkit] library to blur the captured [View](https://developer.android.com/reference/android/view/View) background [Bitmap](https://developer.android.com/reference/android/graphics/Bitmap) and give it to the user/developer through GlassmorphismFactory.BlurListener as a GlassmorphismDrawable and let the user/developer do whatever he want with it (set it as a background/foreground/draw it/set it for other views/apply color filter to it/apply rounded corners to it/ etc...).
+Our library uses [Android](https://github.com/android)'s [RenderScript Intrinsics Replacement Toolkit](https://github.com/android/renderscript-intrinsics-replacement-toolkit) library to blur the captured [View](https://developer.android.com/reference/android/view/View) background [Bitmap](https://developer.android.com/reference/android/graphics/Bitmap) and give it to the user/developer through GlassmorphismFactory.BlurListener as a GlassmorphismDrawable and let the user/developer do whatever he want with it (set it as a background/foreground/draw it/set it for other views/apply color filter to it/apply rounded corners to it/ etc...).
 
-Thanks to (Android)[https://github.com/android] for providing this incredible library even though its in beta version 😶.
+Thanks to [Android](https://github.com/android) for providing this incredible library even though its in beta version 😶.
 
 # Adding our library to your project
 
