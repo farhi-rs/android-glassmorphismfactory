@@ -3,7 +3,8 @@ plugins {
     id 'maven-publish'
 }
 
-publishing {
+afterEvaluate {
+  publishing {
     publications {
         release(MavenPublication) {
             groupId = 'com.github.theignitedflame'
@@ -15,4 +16,5 @@ publishing {
             }
         }
     }
+  }
 }
