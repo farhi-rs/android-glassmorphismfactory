@@ -43,7 +43,7 @@ public class GlassmorphismFactory {
     
     * And you still can add a gradient in top of it, the Glassmorphism bitmap always get drawn at the bottom layer of the drawable and then the rest of the GradientDrawable get drawn later in the top
     
-    * Added methods : Bitmap getBitmap() | void setColorFilter(ColorFilter) | setColorFilter(int, PorterDuff.Mode) | void setColorFilter(int) | Paint getPaint() */
+    * Added methods : Bitmap getBitmap() (null if blur radius equals 0) | void setColorFilter(ColorFilter) | setColorFilter(int, PorterDuff.Mode) | void setColorFilter(int) | Paint getPaint() */
     static class GlassmorphismDrawable extends GradientDrawable {
         View relatedView;
         Bitmap blurredBitmap;
