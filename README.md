@@ -81,7 +81,7 @@ public void onCreate(Bundle bundle) {
     */
 
      /* If you want to include the setted|linked view in its generated Glassmorphism blur */
-     GlassmorphismFactory.setViewIncluded
+     GlassmorphismFactory.setViewIncludedInBlur(View view, boolean included);
 
      /* And then we start generating blur */
      GlassmorphismFactory.startGeneratingBlur();
