@@ -38,7 +38,7 @@ Or download the jar file using this link : https://github.com/theignitedflame/an
 # How to use it ?
 
 Go to your activity ```onCreate(Bundle)``` and prepare and link your views like this :
-```
+```java
 import com.flame.ui.GlassmorphismFactory;
 import com.flame.ui.GlassmorphismFactory.BlurListener;
 import com.flame.ui.GlassmorphismFactory.GlassmorphismDrawable;
@@ -70,9 +70,9 @@ public void onCreate(Bundle bundle) {
         }
         @Override
         public void whenResetBlur(View view) {
-        /* Called when blur generator wants to clear the previous GlassmorphismDrawable you setted (as a background/foreground for example) to avoid blur duplications */
-        /* Useful when you include the view in its generated blur to avoid duplications */
-        /* Not needed when you dont include it */
+        // Called when blur generator wants to clear the previous GlassmorphismDrawable you setted (as a background/foreground for example) to avoid blur duplications
+        // Useful when you include the view in its generated blur to avoid duplications
+        // Not needed when you dont include it
         // simple use : view.setBackgroundColor(Color.TRANSPARENT);
         // another simple use : view.setForeground(new ColorDrawable(Color.TRANSPARENT));
         ....
