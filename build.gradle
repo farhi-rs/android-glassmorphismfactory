@@ -1,20 +1,15 @@
 plugins {
-    id 'com.android.library'
     id 'maven-publish'
 }
 
-afterEvaluate {
-  publishing {
+publishing {
     publications {
-        release(MavenPublication) {
+        mavenJava(MavenPublication) {
             groupId = 'com.github.theignitedflame'
             artifactId = 'android-glassmorphismfactory'
             version = 'v1.0.0-beta'
 
-            afterEvaluate {
-                from components.release
-            }
+            from components.java
         }
     }
-  }
 }
