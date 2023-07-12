@@ -33,4 +33,7 @@ Using gradle :
 	}
 ```
 
-Or download the jar file using this link : 
+Or download the jar file using this link : https://github.com/theignitedflame/android-glassmorphismfactory/releases/download/v1.0.0-beta/android-glassmorphismfactory-v1.0.0-beta.jar
+
+# Methods Documentation
+
