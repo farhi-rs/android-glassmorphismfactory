@@ -35,5 +35,109 @@ Using gradle :
 
 Or download the jar file using this link : https://github.com/theignitedflame/android-glassmorphismfactory/releases/download/v1.0.0-beta/android-glassmorphismfactory-v1.0.0-beta.jar
 
+# How to use it ?
+
+Go to your activity ```onCreate(Bundle)``` and prepare and link your views like this :
+```
+import com.flame.ui.GlassmorphismFactory;
+import com.flame.ui.GlassmorphismFactory.BlurListener;
+import com.flame.ui.GlassmorphismFactory.GlassmorphismDrawable;
+
+...
+public class MyActivity extends Activity {
+
+...
+@Override
+public void onCreate(Bundle bundle) {
+    super.onCreate(bundle);
+    ...
+
+    /* Link our Activity to GlassmorphismFactory */
+     GlassmorphismFactory.setActivity(this);
+    /* Provide a default blur radius (not necessary, default blur value automatically setted to 25) */
+     GlassmorphismFactory.setDefaultBlurRadius(int radius);
+    /* Link our view(s) to GlassmorphismFactory and a BlurListener */
+     GlassmorphismFactory.setBlurListener(View view, BlurListener listener);
+
+    /* Example :
+    *  GlassmorphismFactory.setBlurListener(mylayout, new BlurListener() {
+        @Override
+        public void whenBlurIsReady(View view, GlassmorphismDrawable drawable) {
+            // do whatever you want with drawable (extends GradientDrawable) (a mix between GradientDrawable and BitmapDrawable)
+            // simple use : view.setBackground(drawable);
+            // another simple use : view.setForeground(drawable);
+            ...
+        }
+        @Override
+        public void whenResetBlur(View view) {
+        /* Called when blur generator wants to clear the previous GlassmorphismDrawable you setted (as a background/foreground for example) to avoid blur duplications */
+        /* Useful when you include the view in its generated blur to avoid duplications */
+        /* Not needed when you dont include it */
+        // simple use : view.setBackgroundColor(Color.TRANSPARENT);
+        // another simple use : view.setForeground(new ColorDrawable(Color.TRANSPARENT));
+        ....
+        }
+    });
+    */
+
+     /* If you want to include the setted|linked view in its generated Glassmorphism blur */
+     GlassmorphismFactory.setViewIncluded
+
+     /* And then we start generating blur */
+     GlassmorphismFactory.startGeneratingBlur();
+
+     /* You can stop it later if you want */
+     // GlassmorphismFactory.stopGeneratingBlur();
+
+     ....
+    }
+...
+```
+
+
 # Methods Documentation
 
+- They are all static methods, call them using GlassmorphismFactory.the_method_you_wanna_call.
+
+
+# public static void setActivity(Activity act)
+- This method links a activity to GlassmorphismFactory (actually the window of it).
+
+    
+# public static void setWindow(Window window)
+- This method links a window to GlassmorphismFactory.
+
+    
+# public static void setBlurListener(View view, BlurListener lis)
+- This method links a blur listener to a view.
+- It also link the view to the GlassmorphismFactory for preparation.
+- This method should always be called before startGeneratingBlur method or nothing is gonna start.
+    
+# public static void setBlurRadius(View view, int radius)
+- This method specifies a blur radius value to a view.
+- Blur radius is always confined between 0 and 25.
+   
+    
+# public static void setViewIncludedInBlur(View view, boolean included)
+- Include the linked view into its generated Glassmorphism blur.
+- Useful when applying the GlassmorphismDrawable as a foreground.
+- You must override whenResetBlur(View view) listener method in your BlurListener and clear your previous setted GlassmorphismDrawable to avoid blur duplication.
+    
+# public static void setDefaultBlurRadius(int radius)
+- This method adds a general blur radius to all non specified views.
+- This method doesn't effect the setBlurRadius method (When you apply a specified blur value to a view, the generator ignores the default value).
+- This method must be called before startGeneratingBlur.
+-  Blur radius is always confined between 0 and 25.
+    
+    
+    
+# public static void startGeneratingBlur()
+- And all the magic happens here :) .
+- We must trigger this method in order to apply the Glassmorphism effect to our views.
+- All the generated bitmaps here takes the size of its views so I think its memory safe if you're not applying it to big/a lot of views.
+
+# public static void stopGeneratingBlur()
+This method stops generating Glassmorphism effect
+   
+# public static boolean isBlurGeneratingStarted()
+This method checks if blur generating is started.
