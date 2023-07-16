@@ -2,8 +2,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" 
      xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" 
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <modelVersion>1.0.0-beta</modelVersion>
-  <groupId>com.flame.ui</groupId>
-  <artifactId>glassmorphismfactory</artifactId>
-  <version>1.0.0-beta</version>
+  <modelVersion>v1.0.0-beta</modelVersion>
+  <groupId>com.github.theignitedflame</groupId>
+  <artifactId>android-glassmorphismfactory</artifactId>
+  <version>v1.0.0-beta</version>
 </project>
